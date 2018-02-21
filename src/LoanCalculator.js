@@ -8,88 +8,69 @@ import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import * as _ from 'lodash';
 import { selectAmount, selectTerm } from './actions';
-import Input from './components/Input';
+import LoanInput from './components/LoanInput';
+import Offer from './components/Offer';
 
-let LoanCalculator = ({
-  amountInterval,
-  termInterval,
-  amount,
-  term,
-  totalCostOfCredit,
-  totalRepayableAmount,
-  monthlyPayment,
-  onAmountChange,
-  onTermChange,
-  isFetchingConstraints,
-  isFetchingOffer
-}) => (
+let LoanCalculator = ({ input, offer }) => (
   <View style={{ paddingTop: 30 }}>
-    {!isFetchingConstraints ? (
-      <View>
-        <Input
-          label="Total Amount"
-          min={amountInterval.min}
-          max={amountInterval.max}
-          step={amountInterval.step}
-          value={amount}
-          onChange={onAmountChange}
-        />
-        <Input
-          label="Term"
-          min={termInterval.min}
-          max={termInterval.max}
-          step={termInterval.step}
-          value={term}
-          onChange={onTermChange}
-        />
-      </View>
-    ) : (
-      <View>
-        <Text>Fetching constraints...</Text>
-      </View>
-    )}
-    {!isFetchingOffer ? (
-      <View>
-        <Text>Total cost of credit: {totalCostOfCredit}</Text>
-        <Text>Total repayable amount: {totalRepayableAmount}</Text>
-        <Text>Monthly payment: {monthlyPayment}</Text>
-      </View>
-    ) : (
-      <View>
-        <Text>Fetching offer...</Text>
-      </View>
-    )}
+    <LoanInput {...input} />
+    <Offer {...offer} />
   </View>
 );
 
 LoanCalculator.propTypes = {
-  amountInterval: PropTypes.object,
-  termInterval: PropTypes.object,
-  amount: PropTypes.number.isRequired,
-  term: PropTypes.number.isRequired,
-  totalCostOfCredit: PropTypes.number.isRequired,
-  totalRepayableAmount: PropTypes.number.isRequired,
-  monthlyPayment: PropTypes.number.isRequired,
-  onAmountChange: PropTypes.func.isRequired,
-  onTermChange: PropTypes.func.isRequired,
-  isFetchingConstraints: PropTypes.bool.isRequired,
-  isFetchingOffer: PropTypes.bool.isRequired
+  input: PropTypes.shape({
+    isFetching: PropTypes.bool.isRequired,
+    amountInterval: PropTypes.object,
+    termInterval: PropTypes.object,
+    amount: PropTypes.number,
+    term: PropTypes.number,
+    onAmountChange: PropTypes.func.isRequired,
+    onTermChange: PropTypes.func.isRequired
+  }),
+  offer: PropTypes.shape({
+    isFetching: PropTypes.bool.isRequired,
+    totalCostOfCredit: PropTypes.number,
+    totalRepayableAmount: PropTypes.number,
+    monthlyPayment: PropTypes.number
+  })
 };
 
 const mapStateToProps = state => {
   return {
-    ...state
+    input: {
+      isFetching: state.isFetchingConstraints,
+      amountInterval: state.amountInterval,
+      termInterval: state.termInterval,
+      amount: state.amount,
+      term: state.term
+    },
+    offer: {
+      isFetching: state.isFetchingOffer,
+      totalCostOfCredit: state.totalCostOfCredit,
+      totalRepayableAmount: state.totalRepayableAmount,
+      monthlyPayment: state.monthlyPayment
+    }
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onAmountChange: amount => dispatch(selectAmount(amount)),
-    onTermChange: term => dispatch(selectTerm(term))
+    input: {
+      onAmountChange: amount => dispatch(selectAmount(amount)),
+      onTermChange: term => dispatch(selectTerm(term))
+    }
   };
 };
 
-LoanCalculator = connect(mapStateToProps, mapDispatchToProps)(LoanCalculator);
+const mergeProps = (stateProps, dispatchProps, ownProps) => {
+  return _.merge({}, stateProps, dispatchProps);
+};
+
+LoanCalculator = connect(mapStateToProps, mapDispatchToProps, mergeProps)(
+  LoanCalculator
+);
 
 export default LoanCalculator;

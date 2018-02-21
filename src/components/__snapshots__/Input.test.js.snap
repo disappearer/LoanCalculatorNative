@@ -1,0 +1,903 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component When fetching renders as expected 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Input
+    isFetching={true}
+    label="Total Amount"
+    max={6}
+    min={1}
+    onChange={[Function]}
+    step={1}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "green",
+            }
+          }
+        >
+          Total Amount
+        </Text>,
+        <Slider
+          disabled={false}
+          maximumValue={6}
+          minimumValue={1}
+          onValueChange={[Function]}
+          step={1}
+          type="range"
+          value={0}
+        />,
+        <Picker
+          mode="dialog"
+          onValueChange={[Function]}
+          selectedValue={undefined}
+        >
+          <PickerItem
+            label="1"
+            value={1}
+          />
+          <PickerItem
+            label="2"
+            value={2}
+          />
+          <PickerItem
+            label="3"
+            value={3}
+          />
+          <PickerItem
+            label="4"
+            value={4}
+          />
+          <PickerItem
+            label="5"
+            value={5}
+          />
+          <PickerItem
+            label="6"
+            value={6}
+          />
+        </Picker>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "accessible": true,
+          "allowFontScaling": true,
+          "children": "Total Amount",
+          "ellipsizeMode": "tail",
+          "style": Object {
+            "color": "green",
+          },
+        },
+        "ref": null,
+        "rendered": "Total Amount",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "disabled": false,
+          "maximumValue": 6,
+          "minimumValue": 1,
+          "onValueChange": [Function],
+          "step": 1,
+          "type": "range",
+          "value": 0,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <PickerItem
+              label="1"
+              value={1}
+            />,
+            <PickerItem
+              label="2"
+              value={2}
+            />,
+            <PickerItem
+              label="3"
+              value={3}
+            />,
+            <PickerItem
+              label="4"
+              value={4}
+            />,
+            <PickerItem
+              label="5"
+              value={5}
+            />,
+            <PickerItem
+              label="6"
+              value={6}
+            />,
+          ],
+          "mode": "dialog",
+          "onValueChange": [Function],
+          "selectedValue": undefined,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "class",
+            "props": Object {
+              "label": "1",
+              "value": 1,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "class",
+            "props": Object {
+              "label": "2",
+              "value": 2,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "3",
+            "nodeType": "class",
+            "props": Object {
+              "label": "3",
+              "value": 3,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "4",
+            "nodeType": "class",
+            "props": Object {
+              "label": "4",
+              "value": 4,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "5",
+            "nodeType": "class",
+            "props": Object {
+              "label": "5",
+              "value": 5,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "6",
+            "nodeType": "class",
+            "props": Object {
+              "label": "6",
+              "value": 6,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "green",
+              }
+            }
+          >
+            Total Amount
+          </Text>,
+          <Slider
+            disabled={false}
+            maximumValue={6}
+            minimumValue={1}
+            onValueChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />,
+          <Picker
+            mode="dialog"
+            onValueChange={[Function]}
+            selectedValue={undefined}
+          >
+            <PickerItem
+              label="1"
+              value={1}
+            />
+            <PickerItem
+              label="2"
+              value={2}
+            />
+            <PickerItem
+              label="3"
+              value={3}
+            />
+            <PickerItem
+              label="4"
+              value={4}
+            />
+            <PickerItem
+              label="5"
+              value={5}
+            />
+            <PickerItem
+              label="6"
+              value={6}
+            />
+          </Picker>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "Total Amount",
+            "ellipsizeMode": "tail",
+            "style": Object {
+              "color": "green",
+            },
+          },
+          "ref": null,
+          "rendered": "Total Amount",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "disabled": false,
+            "maximumValue": 6,
+            "minimumValue": 1,
+            "onValueChange": [Function],
+            "step": 1,
+            "type": "range",
+            "value": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <PickerItem
+                label="1"
+                value={1}
+              />,
+              <PickerItem
+                label="2"
+                value={2}
+              />,
+              <PickerItem
+                label="3"
+                value={3}
+              />,
+              <PickerItem
+                label="4"
+                value={4}
+              />,
+              <PickerItem
+                label="5"
+                value={5}
+              />,
+              <PickerItem
+                label="6"
+                value={6}
+              />,
+            ],
+            "mode": "dialog",
+            "onValueChange": [Function],
+            "selectedValue": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "class",
+              "props": Object {
+                "label": "1",
+                "value": 1,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "class",
+              "props": Object {
+                "label": "2",
+                "value": 2,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "3",
+              "nodeType": "class",
+              "props": Object {
+                "label": "3",
+                "value": 3,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "4",
+              "nodeType": "class",
+              "props": Object {
+                "label": "4",
+                "value": 4,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "5",
+              "nodeType": "class",
+              "props": Object {
+                "label": "5",
+                "value": 5,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "6",
+              "nodeType": "class",
+              "props": Object {
+                "label": "6",
+                "value": 6,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Input component When not fetching renders as expected 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Input
+    isFetching={false}
+    label="Total Amount"
+    max={6}
+    min={1}
+    onChange={[Function]}
+    step={1}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "green",
+            }
+          }
+        >
+          Total Amount
+        </Text>,
+        <Slider
+          disabled={false}
+          maximumValue={6}
+          minimumValue={1}
+          onValueChange={[Function]}
+          step={1}
+          type="range"
+          value={0}
+        />,
+        <Picker
+          mode="dialog"
+          onValueChange={[Function]}
+          selectedValue={undefined}
+        >
+          <PickerItem
+            label="1"
+            value={1}
+          />
+          <PickerItem
+            label="2"
+            value={2}
+          />
+          <PickerItem
+            label="3"
+            value={3}
+          />
+          <PickerItem
+            label="4"
+            value={4}
+          />
+          <PickerItem
+            label="5"
+            value={5}
+          />
+          <PickerItem
+            label="6"
+            value={6}
+          />
+        </Picker>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "accessible": true,
+          "allowFontScaling": true,
+          "children": "Total Amount",
+          "ellipsizeMode": "tail",
+          "style": Object {
+            "color": "green",
+          },
+        },
+        "ref": null,
+        "rendered": "Total Amount",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "disabled": false,
+          "maximumValue": 6,
+          "minimumValue": 1,
+          "onValueChange": [Function],
+          "step": 1,
+          "type": "range",
+          "value": 0,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <PickerItem
+              label="1"
+              value={1}
+            />,
+            <PickerItem
+              label="2"
+              value={2}
+            />,
+            <PickerItem
+              label="3"
+              value={3}
+            />,
+            <PickerItem
+              label="4"
+              value={4}
+            />,
+            <PickerItem
+              label="5"
+              value={5}
+            />,
+            <PickerItem
+              label="6"
+              value={6}
+            />,
+          ],
+          "mode": "dialog",
+          "onValueChange": [Function],
+          "selectedValue": undefined,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "class",
+            "props": Object {
+              "label": "1",
+              "value": 1,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "class",
+            "props": Object {
+              "label": "2",
+              "value": 2,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "3",
+            "nodeType": "class",
+            "props": Object {
+              "label": "3",
+              "value": 3,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "4",
+            "nodeType": "class",
+            "props": Object {
+              "label": "4",
+              "value": 4,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "5",
+            "nodeType": "class",
+            "props": Object {
+              "label": "5",
+              "value": 5,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "6",
+            "nodeType": "class",
+            "props": Object {
+              "label": "6",
+              "value": 6,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "green",
+              }
+            }
+          >
+            Total Amount
+          </Text>,
+          <Slider
+            disabled={false}
+            maximumValue={6}
+            minimumValue={1}
+            onValueChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />,
+          <Picker
+            mode="dialog"
+            onValueChange={[Function]}
+            selectedValue={undefined}
+          >
+            <PickerItem
+              label="1"
+              value={1}
+            />
+            <PickerItem
+              label="2"
+              value={2}
+            />
+            <PickerItem
+              label="3"
+              value={3}
+            />
+            <PickerItem
+              label="4"
+              value={4}
+            />
+            <PickerItem
+              label="5"
+              value={5}
+            />
+            <PickerItem
+              label="6"
+              value={6}
+            />
+          </Picker>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "Total Amount",
+            "ellipsizeMode": "tail",
+            "style": Object {
+              "color": "green",
+            },
+          },
+          "ref": null,
+          "rendered": "Total Amount",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "disabled": false,
+            "maximumValue": 6,
+            "minimumValue": 1,
+            "onValueChange": [Function],
+            "step": 1,
+            "type": "range",
+            "value": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <PickerItem
+                label="1"
+                value={1}
+              />,
+              <PickerItem
+                label="2"
+                value={2}
+              />,
+              <PickerItem
+                label="3"
+                value={3}
+              />,
+              <PickerItem
+                label="4"
+                value={4}
+              />,
+              <PickerItem
+                label="5"
+                value={5}
+              />,
+              <PickerItem
+                label="6"
+                value={6}
+              />,
+            ],
+            "mode": "dialog",
+            "onValueChange": [Function],
+            "selectedValue": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "class",
+              "props": Object {
+                "label": "1",
+                "value": 1,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "class",
+              "props": Object {
+                "label": "2",
+                "value": 2,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "3",
+              "nodeType": "class",
+              "props": Object {
+                "label": "3",
+                "value": 3,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "4",
+              "nodeType": "class",
+              "props": Object {
+                "label": "4",
+                "value": 4,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "5",
+              "nodeType": "class",
+              "props": Object {
+                "label": "5",
+                "value": 5,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "6",
+              "nodeType": "class",
+              "props": Object {
+                "label": "6",
+                "value": 6,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

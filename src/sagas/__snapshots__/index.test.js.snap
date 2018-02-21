@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fetchConstraints saga Calls the api 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`fetchConstraints saga Dispatches FETCH_CONSTRAINTS_FAIL on fail 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "error": [Error: Fetching constraints failed],
+      "type": "FETCH_CONSTRAINTS_SUCCESS",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`fetchConstraints saga Dispatches FETCH_CONSTRAINTS_REQUEST action 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "type": "FETCH_CONSTRAINTS_REQUEST",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`fetchConstraints saga Dispatches FETCH_CONSTRAINTS_SUCCESS on success 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "constraints": Object {
+        "amountInterval": Object {
+          "defaultValue": 400,
+          "max": 2000,
+          "min": 10,
+          "step": 10,
+        },
+        "termInterval": Object {
+          "defaultValue": 15,
+          "max": 30,
+          "min": 3,
+          "step": 1,
+        },
+      },
+      "type": "FETCH_CONSTRAINTS_SUCCESS",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`fetchOffer saga Calls the api 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      303,
+      23,
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`fetchOffer saga Dispatches FECTH_OFFER_REQUEST action 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "type": "FETCH_OFFER_REQUEST",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`fetchOffer saga Dispatches FETCH_OFFER_FAIL on fail 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "error": [Error: Fetching offer failed],
+      "type": "FETCH_OFFER_SUCCESS",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`fetchOffer saga Dispatches FETCH_OFFER_SUCCESS on success 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "offer": Object {
+        "monthlyPayment": 32,
+        "term": "15",
+        "totalCostOfCredit": 40,
+        "totalPrincipal": "400",
+        "totalRepayableAmount": 480,
+      },
+      "type": "FETCH_OFFER_SUCCESS",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`handleAmountChange saga calls the fetchOfferSaga 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      303,
+      23,
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`handleAmountChange saga delays for 200ms 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      200,
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`handleAmountChange saga selects amount and term from state 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "SELECT": Object {
+    "args": Array [],
+    "selector": [Function],
+  },
+}
+`;
+
+exports[`handleAmountChange saga selects amount and term from state 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "SELECT": Object {
+    "args": Array [],
+    "selector": [Function],
+  },
+}
+`;
+
+exports[`handleTermChange saga calls the fetchOfferSaga 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      303,
+      23,
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`handleTermChange saga delays for 200ms 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      200,
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`handleTermChange saga selects amount and term from state 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "SELECT": Object {
+    "args": Array [],
+    "selector": [Function],
+  },
+}
+`;
+
+exports[`handleTermChange saga selects amount and term from state 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "SELECT": Object {
+    "args": Array [],
+    "selector": [Function],
+  },
+}
+`;
+
+exports[`root saga calls fetchConstraints saga 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`root saga calls fetchOffer saga 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      303,
+      23,
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`root saga forks watchAmountChange and watchTermChange sagas 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`root saga forks watchAmountChange and watchTermChange sagas 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`root saga selects amount and term from state 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "SELECT": Object {
+    "args": Array [],
+    "selector": [Function],
+  },
+}
+`;
+
+exports[`root saga selects amount and term from state 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "SELECT": Object {
+    "args": Array [],
+    "selector": [Function],
+  },
+}
+`;
+
+exports[`watchAmountChange saga takes SELECT_AMOUNT action 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "SELECT_AMOUNT",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`watchTermChange saga takes SELECT_TERM action 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "SELECT_TERM",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;

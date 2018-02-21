@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reducer Handles action FETCH_CONSTRAINTS_FAIL 1`] = `
+Object {
+  "amount": 0,
+  "amountInterval": null,
+  "error": [Error: Fetching constraints failed],
+  "isFetchingConstraints": false,
+  "isFetchingOffer": true,
+  "monthlyPayment": 0,
+  "term": 0,
+  "termInterval": null,
+  "totalCostOfCredit": 0,
+  "totalRepayableAmount": 0,
+}
+`;
+
+exports[`Reducer Handles action FETCH_CONSTRAINTS_REQUEST 1`] = `
+Object {
+  "amount": 0,
+  "amountInterval": null,
+  "error": null,
+  "isFetchingConstraints": true,
+  "isFetchingOffer": true,
+  "monthlyPayment": 0,
+  "term": 0,
+  "termInterval": null,
+  "totalCostOfCredit": 0,
+  "totalRepayableAmount": 0,
+}
+`;
+
+exports[`Reducer Handles action FETCH_CONSTRAINTS_SUCCESS 1`] = `
+Object {
+  "amount": 400,
+  "amountInterval": Object {
+    "defaultValue": 400,
+    "max": 2000,
+    "min": 10,
+    "step": 10,
+  },
+  "error": null,
+  "isFetchingConstraints": false,
+  "isFetchingOffer": true,
+  "monthlyPayment": 0,
+  "term": 15,
+  "termInterval": Object {
+    "defaultValue": 15,
+    "max": 30,
+    "min": 3,
+    "step": 1,
+  },
+  "totalCostOfCredit": 0,
+  "totalRepayableAmount": 0,
+}
+`;
+
+exports[`Reducer Handles action FETCH_OFFER_FAIL 1`] = `
+Object {
+  "amount": 0,
+  "amountInterval": null,
+  "error": [Error: Fetching offer failed],
+  "isFetchingConstraints": true,
+  "isFetchingOffer": false,
+  "monthlyPayment": 0,
+  "term": 0,
+  "termInterval": null,
+  "totalCostOfCredit": 0,
+  "totalRepayableAmount": 0,
+}
+`;
+
+exports[`Reducer Handles action FETCH_OFFER_REQUEST 1`] = `
+Object {
+  "amount": 0,
+  "amountInterval": null,
+  "error": null,
+  "isFetchingConstraints": true,
+  "isFetchingOffer": true,
+  "monthlyPayment": 0,
+  "term": 0,
+  "termInterval": null,
+  "totalCostOfCredit": 0,
+  "totalRepayableAmount": 0,
+}
+`;
+
+exports[`Reducer Handles action FETCH_OFFER_SUCCESS 1`] = `
+Object {
+  "amount": 0,
+  "amountInterval": null,
+  "error": null,
+  "isFetchingConstraints": true,
+  "isFetchingOffer": false,
+  "monthlyPayment": 32,
+  "term": 0,
+  "termInterval": null,
+  "totalCostOfCredit": 40,
+  "totalRepayableAmount": 480,
+}
+`;
+
+exports[`Reducer Handles action SELECT_AMOUNT 1`] = `
+Object {
+  "amount": 301,
+  "amountInterval": null,
+  "error": null,
+  "isFetchingConstraints": true,
+  "isFetchingOffer": true,
+  "monthlyPayment": 0,
+  "term": 0,
+  "termInterval": null,
+  "totalCostOfCredit": 0,
+  "totalRepayableAmount": 0,
+}
+`;
+
+exports[`Reducer Handles action SELECT_TERM 1`] = `
+Object {
+  "amount": 0,
+  "amountInterval": null,
+  "error": null,
+  "isFetchingConstraints": true,
+  "isFetchingOffer": true,
+  "monthlyPayment": 0,
+  "term": 30,
+  "termInterval": null,
+  "totalCostOfCredit": 0,
+  "totalRepayableAmount": 0,
+}
+`;

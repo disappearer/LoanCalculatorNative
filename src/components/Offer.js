@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-const Offer = ({
+let Offer = ({
   isFetching,
   totalCostOfCredit,
   totalRepayableAmount,
@@ -29,5 +30,14 @@ Offer.propTypes = {
   totalRepayableAmount: PropTypes.number,
   monthlyPayment: PropTypes.number
 };
+
+const mapStateToProps = state => ({
+  isFetching: state.isFetchingOffer,
+  totalCostOfCredit: state.totalCostOfCredit,
+  totalRepayableAmount: state.totalRepayableAmount,
+  monthlyPayment: state.monthlyPayment
+});
+
+Offer = connect(mapStateToProps)(Offer);
 
 export default Offer;

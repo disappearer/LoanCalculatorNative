@@ -1,15 +1,11 @@
 import React from 'react';
-import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import createSagaMiddleware from 'redux-saga';
-import logger from 'redux-logger';
-import reducer from './reducers';
+import configureStore from './store/configureStore';
 import { root } from './sagas';
 import LoanCalculator from './LoanCalculator';
 
-const sagaMiddleware = createSagaMiddleware();
-const store = createStore(reducer, applyMiddleware(logger, sagaMiddleware));
-sagaMiddleware.run(root);
+const store = configureStore(undefined);
+store.runSaga(root);
 
 const App = () => (
   <Provider store={store}>

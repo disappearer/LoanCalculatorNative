@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Input from './Input';
 
 const LoanInput = ({
-  isFetching,
+  isFetchingConstraints,
   amountInterval,
   amount,
   onAmountChange,
@@ -13,7 +13,7 @@ const LoanInput = ({
   onTermChange
 }) => (
   <View>
-    {!isFetching ? (
+    {!isFetchingConstraints ? (
       <View>
         <Input
           label="Total Amount"
@@ -41,7 +41,7 @@ const LoanInput = ({
 );
 
 LoanInput.propTypes = {
-  isFetching: PropTypes.bool.isRequired,
+  isFetchingConstraints: PropTypes.bool.isRequired,
   amountInterval: PropTypes.object,
   amount: PropTypes.number,
   onAmountChange: PropTypes.func.isRequired,

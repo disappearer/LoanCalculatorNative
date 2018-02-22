@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import { connect } from 'react-redux';
@@ -13,16 +7,16 @@ import { selectAmount, selectTerm } from './actions';
 import LoanInput from './components/LoanInput';
 import Offer from './components/Offer';
 
-let LoanCalculator = ({ input, offer }) => (
+let LoanCalculator = ({ input }) => (
   <View style={{ paddingTop: 30 }}>
     <LoanInput {...input} />
-    <Offer {...offer} />
+    <Offer />
   </View>
 );
 
 LoanCalculator.propTypes = {
   input: PropTypes.shape({
-    isFetching: PropTypes.bool.isRequired,
+    isFetchingConstraints: PropTypes.bool.isRequired,
     amountInterval: PropTypes.object,
     termInterval: PropTypes.object,
     amount: PropTypes.number,
@@ -41,17 +35,11 @@ LoanCalculator.propTypes = {
 const mapStateToProps = state => {
   return {
     input: {
-      isFetching: state.isFetchingConstraints,
+      isFetchingConstraints: state.isFetchingConstraints,
       amountInterval: state.amountInterval,
       termInterval: state.termInterval,
       amount: state.amount,
       term: state.term
-    },
-    offer: {
-      isFetching: state.isFetchingOffer,
-      totalCostOfCredit: state.totalCostOfCredit,
-      totalRepayableAmount: state.totalRepayableAmount,
-      monthlyPayment: state.monthlyPayment
     }
   };
 };

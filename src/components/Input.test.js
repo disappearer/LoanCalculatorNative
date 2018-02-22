@@ -14,6 +14,7 @@ describe('Input component', () => {
         min={1}
         max={6}
         step={1}
+        value={3}
         onChange={() => {}}
       />
     );
@@ -28,6 +29,7 @@ describe('Input component', () => {
         min={1}
         max={6}
         step={1}
+        value={3}
         onChange={() => {}}
       />
     );

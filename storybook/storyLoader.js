@@ -6,11 +6,15 @@
 
 function loadStories() {
   require('../src/components/Input.stories');
+  require('../src/components/LoanInput.stories');
+  require('../src/components/Offer.stories');
   
 }
 
 const stories = [
   '../src/components/Input.stories',
+  '../src/components/LoanInput.stories',
+  '../src/components/Offer.stories',
   
 ];
 

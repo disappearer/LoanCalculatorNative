@@ -1,18 +1,22 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import PropTypes from 'prop-types';
+import { translate } from 'react-i18next';
 import { connect } from 'react-redux';
 
 let Offer = ({
   isFetching,
   totalCostOfCredit,
   totalRepayableAmount,
-  monthlyPayment
+  monthlyPayment,
+  t
 }) => (
-  <View>
+  <View style={{ flex: 2 }}>
     {!isFetching ? (
       <View>
-        <Text>Total cost of credit: {totalCostOfCredit}</Text>
+        <Text>
+          {t('creditCost')}: {totalCostOfCredit}
+        </Text>
         <Text>Total repayable amount: {totalRepayableAmount}</Text>
         <Text>Monthly payment: {monthlyPayment}</Text>
       </View>
@@ -38,6 +42,6 @@ const mapStateToProps = state => ({
   monthlyPayment: state.monthlyPayment
 });
 
-Offer = connect(mapStateToProps)(Offer);
+Offer = connect(mapStateToProps)(translate('offer')(Offer));
 
 export default Offer;

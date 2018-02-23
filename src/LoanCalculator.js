@@ -1,18 +1,59 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, ScrollView, Button, View } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as _ from 'lodash';
+import { withNavigation } from 'react-navigation';
+import { translate } from 'react-i18next';
 import { selectAmount, selectTerm } from './actions';
 import LoanInput from './components/LoanInput';
 import Offer from './components/Offer';
 
-let LoanCalculator = ({ input }) => (
-  <View style={{ paddingTop: 30 }}>
-    <LoanInput {...input} />
-    <Offer />
-  </View>
-);
+class LoanCalculator extends Component {
+  static navigationOptions = ({ navigation, screenProps }) => {
+    return {
+      headerTitle: () => (
+        <View>
+          <Text>{screenProps.t('loan:title')}</Text>
+        </View>
+      ),
+      headerRight: (
+        <Button
+          onPress={() => navigation.navigate('MyModal')}
+          title="Modal"
+          color="blue"
+        />
+      )
+    };
+  };
+
+  render() {
+    const { input, navigation, i18n, t } = this.props;
+    const { navigate } = navigation;
+    return (
+      <ScrollView>
+        <LoanInput {...input} />
+        <Offer />
+        <Button
+          onPress={() => navigate('Other', { a: 'aaa', b: 'bbb' })}
+          title="Other Page"
+        />
+        <Button
+          onPress={() => {
+            i18n.changeLanguage('en');
+          }}
+          title={t('common:actions.toggleToEnglish')}
+        />
+        <Button
+          onPress={() => {
+            i18n.changeLanguage('sr');
+          }}
+          title={t('common:actions.toggleToSerbian')}
+        />
+      </ScrollView>
+    );
+  }
+}
 
 LoanCalculator.propTypes = {
   input: PropTypes.shape({
@@ -24,12 +65,7 @@ LoanCalculator.propTypes = {
     onAmountChange: PropTypes.func.isRequired,
     onTermChange: PropTypes.func.isRequired
   }),
-  offer: PropTypes.shape({
-    isFetching: PropTypes.bool.isRequired,
-    totalCostOfCredit: PropTypes.number,
-    totalRepayableAmount: PropTypes.number,
-    monthlyPayment: PropTypes.number
-  })
+  navigation: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => {
@@ -57,8 +93,6 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
   return _.merge({}, stateProps, dispatchProps);
 };
 
-LoanCalculator = connect(mapStateToProps, mapDispatchToProps, mergeProps)(
-  LoanCalculator
+export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(
+  withNavigation(translate('common')(LoanCalculator))
 );
-
-export default LoanCalculator;

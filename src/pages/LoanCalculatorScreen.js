@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import * as _ from 'lodash';
 import { withNavigation } from 'react-navigation';
 import { translate } from 'react-i18next';
-import { selectAmount, selectTerm } from './actions';
-import LoanInput from './components/LoanInput';
-import Offer from './components/Offer';
+import { selectAmount, selectTerm } from '../actions';
+import LoanInput from '../components/LoanInput';
+import Offer from '../components/Offer';
 
-class LoanCalculator extends Component {
+class LoanCalculatorScreen extends Component {
   static navigationOptions = ({ navigation, screenProps }) => {
     return {
       headerTitle: () => (
@@ -55,7 +55,7 @@ class LoanCalculator extends Component {
   }
 }
 
-LoanCalculator.propTypes = {
+LoanCalculatorScreen.propTypes = {
   input: PropTypes.shape({
     isFetchingConstraints: PropTypes.bool.isRequired,
     amountInterval: PropTypes.object,
@@ -94,5 +94,5 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(
-  withNavigation(translate('common')(LoanCalculator))
+  withNavigation(translate('common')(LoanCalculatorScreen))
 );

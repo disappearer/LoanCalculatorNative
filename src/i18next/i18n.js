@@ -21,6 +21,9 @@ i18n
         },
         offer: {
           creditCost: 'Ukupna cena kredita'
+        },
+        modal: {
+          description: 'Ovo je modal'
         }
       },
       en: {
@@ -44,31 +47,13 @@ i18n
             '<0><0>Eins </O><1>Zwei </1><2>Drei </2><3>Vier </3><4>Fünf</4></O>'
         },
         modal: {
-          description: 'This is a mordal'
+          description: 'This is a modal'
         },
         loan: {
           title: 'Loan Calculator'
         },
         offer: {
           creditCost: 'Total cost of credit'
-        }
-      },
-      de: {
-        home: {
-          title: 'Willkommen',
-          introduction: 'Dieser Text ist von i18next und ist in deutsch.'
-        },
-        page2: {
-          title: 'Seite 2',
-          introduction: 'Text auf Seite 2'
-        },
-        common: {
-          currentLanguage: 'Die Sprache ist auf "{{lng}}" gesetzt',
-          actions: {
-            toggleToGerman: 'Deutsch',
-            toggleToEnglish: 'English',
-            goToPage2: 'Öffne Seite 2'
-          }
         }
       }
     },

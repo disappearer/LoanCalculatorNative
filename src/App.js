@@ -6,39 +6,25 @@ import { StackNavigator } from 'react-navigation';
 import { View, Text, Button } from 'react-native';
 import { translate, I18nextProvider } from 'react-i18next';
 import i18n from './i18next/i18n';
-import LoanCalculator from './LoanCalculator';
-import OtherPage from './OtherPage';
+import LoanCalculatorScreen from './pages/LoanCalculatorScreen';
+import OtherPageScreen from './pages/OtherPageScreen';
+import ModalScreen from './pages/ModalScreen';
 
 const store = configureStore(undefined);
 store.runSaga(root);
 
-class ModalScreen extends React.Component {
-  render() {
-    const { t } = this.props;
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 30 }}>{t('description')}</Text>
-        <Button
-          onPress={() => this.props.navigation.goBack()}
-          title="Dismiss"
-        />
-      </View>
-    );
-  }
-}
-
-const Stack = StackNavigator({
-  Loan: { screen: LoanCalculator },
-  Other: { screen: OtherPage }
+const MainStack = StackNavigator({
+  Loan: { screen: LoanCalculatorScreen },
+  Other: { screen: OtherPageScreen }
 });
 
 const RootStack = StackNavigator(
   {
     Main: {
-      screen: Stack
+      screen: MainStack
     },
     MyModal: {
-      screen: translate('modal')(ModalScreen)
+      screen: ModalScreen
     }
   },
   {
@@ -46,6 +32,7 @@ const RootStack = StackNavigator(
     headerMode: 'none'
   }
 );
+
 const WrappedRootStack = () => (
   <RootStack screenProps={{ t: i18n.getFixedT() }} />
 );
